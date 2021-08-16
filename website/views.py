@@ -44,13 +44,13 @@ def home(request):
 	global sq_questions
 	# load the questions from file for general knowledge Quiz.
 	sq_questions=[]
-	f = open(load_questions_gk,"r")
-	reader = csv.reader(f)
-	for row in reader:
-		sq_questions.append(row)
-	f.close
-	global no_of_questions
-	no_of_questions = len(sq_questions)
+	#f = open(load_questions_gk,"r")
+	#reader = csv.reader(f)
+	#for row in reader:
+		#sq_questions.append(row)
+	#f.close
+	#global no_of_questions
+	#no_of_questions = len(sq_questions)
 
 	# load the questions from file for  juniorgeneral knowledge Quiz.
 	global sq_jquestions
