@@ -46,7 +46,7 @@ def home(request):
 	sq_questions=[]
 	f = open(load_questions_gk,"r")
 	reader = csv.reader(f)
-	for row in reader:
+	for row in reader :
 		sq_questions.append(row)
 	f.close
 	global no_of_questions
@@ -57,7 +57,7 @@ def home(request):
 	sq_jquestions=[]
 	f = open(load_questions_jgk,"r")
 	reader = csv.reader(f)
-	for row in reader:
+	for row in reader :
 		sq_jquestions.append(row)
 	f.close
 	global no_of_jquestions
