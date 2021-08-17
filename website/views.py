@@ -47,8 +47,8 @@ def home(request):
 	# try this code
 	with open('load_questions_gk', mode='r') as csv_file:
 		csv_reader = csv.DictReader(csv_file)
-    	for row in csv_reader:
-    		sq_questions.append(row)
+		for row in csv_reader:
+			sq_questions.append(row)
 
     #Replaced code
 	#f = open(load_questions_gk,"r")
