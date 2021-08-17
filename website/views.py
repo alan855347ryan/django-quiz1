@@ -45,7 +45,7 @@ def home(request):
 	# load the questions from file for general knowledge Quiz.
 	sq_questions=[]
 	# try this code
-	with open('load_questions_gk', mode='r') as csv_file:
+	with open(load_questions_gk, mode='r') as csv_file:
 		csv_reader = csv.DictReader(csv_file)
 		for row in csv_reader:
 			sq_questions.append(row)
