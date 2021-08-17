@@ -27,7 +27,7 @@ global last_question_no
 
 #Get the questions from the file
 load_questions_gk = 'generalknowledge3.txt'
-load_questions_jgk = 'juniorgeneralknowledge2.csv'
+load_questions_jgk = 'juniorgeneralknowledge3.txt'
 
 # open the file  and place questions,options and answers into a list called sq_questions
 
@@ -56,18 +56,24 @@ def home(request):
 	#for row in reader:
 		#sq_questions.append(row)
 
-	f.close
+	csv_file.close
 	global no_of_questions
 	no_of_questions = len(sq_questions)
 
 	# load the questions from file for  juniorgeneral knowledge Quiz.
 	global sq_jquestions
 	sq_jquestions=[]
-	f = open(load_questions_jgk,"r")
-	reader = csv.reader(f)
-	for row in reader:
-		sq_jquestions.append(row)
-	f.close
+	with open(load_questions_jgk, mode='r') as csv_file:
+		csv_reader = csv.DictReader(csv_file)
+		for row in csv_reader:
+			sq_questions.append(row)
+	csv_file.close
+
+	#f = open(load_questions_jgk,"r")
+	#reader = csv.reader(f)
+	#for row in reader:
+	#	sq_jquestions.append(row)
+	
 	global no_of_jquestions
 	no_of_jquestions = len(sq_jquestions)
 
