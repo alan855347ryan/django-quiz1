@@ -48,6 +48,7 @@ def home(request):
 	reader = csv.reader(f)
 	for row in reader:
 		sq_questions.append(row)
+
 	f.close
 	global no_of_questions
 	no_of_questions = len(sq_questions)
