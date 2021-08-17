@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import csv
+from csv import reader
 import time
 from random import randint
 
