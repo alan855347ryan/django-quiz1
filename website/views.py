@@ -1,6 +1,5 @@
 from django.shortcuts import render
 import csv
-from csv import reader
 import time
 from random import randint
 
@@ -27,8 +26,8 @@ global choice
 global last_question_no
 
 #Get the questions from the file
-load_questions_gk = 'generalknowledge.csv'
-load_questions_jgk = 'juniorgeneralknowledge.csv'
+load_questions_gk = 'generalknowledge2.csv'
+load_questions_jgk = 'juniorgeneralknowledge2.csv'
 
 # open the file  and place questions,options and answers into a list called sq_questions
 
