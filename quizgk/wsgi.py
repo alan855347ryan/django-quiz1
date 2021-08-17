@@ -16,7 +16,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quizgk.settings')
-sys.setdefaultencoding("utf-8")
+#sys.setdefaultencoding("utf-8")
 
 
 application = get_wsgi_application()
