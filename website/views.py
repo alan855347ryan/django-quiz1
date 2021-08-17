@@ -26,7 +26,7 @@ global choice
 global last_question_no
 
 #Get the questions from the file
-load_questions_gk = 'generalknowledge2.csv'
+load_questions_gk = 'generalknowledge3.txt'
 load_questions_jgk = 'juniorgeneralknowledge2.csv'
 
 # open the file  and place questions,options and answers into a list called sq_questions
@@ -44,10 +44,20 @@ def home(request):
 	global sq_questions
 	# load the questions from file for general knowledge Quiz.
 	sq_questions=[]
-	f = open(load_questions_gk,"r")
-	reader = csv.reader(f)
-	for row in reader:
-		sq_questions.append(row)
+	# try this code
+	with open('load_questions_gk', mode='r') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    line_count = 0
+    for row in csv_reader:
+    	sq_questions.append(row)
+
+
+
+    #Replaced code
+	#f = open(load_questions_gk,"r")
+	#reader = csv.reader(f)
+	#for row in reader:
+		#sq_questions.append(row)
 
 	f.close
 	global no_of_questions
