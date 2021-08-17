@@ -45,7 +45,7 @@ def home(request):
 	# load the questions from file for general knowledge Quiz.
 	sq_questions=[]
 	f = open(load_questions_gk,"r")
-	reader = csv.reader(f,sep=",", encoding='cp1252')
+	reader = csv.reader(f, encoding='cp1252')
 	for row in reader:
 		sq_questions.append(row)
 	f.close
@@ -56,7 +56,7 @@ def home(request):
 	global sq_jquestions
 	sq_jquestions=[]
 	f = open(load_questions_jgk,"r")
-	reader = csv.reader(f)
+	reader = csv.reader(f, encoding='cp1252')
 	for row in reader :
 		sq_jquestions.append(row)
 	f.close
